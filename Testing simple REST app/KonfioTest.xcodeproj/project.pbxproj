@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A38AAA992DBC59CF005F6EBC /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AAA982DBC59C2005F6EBC /* Rating.swift */; };
+		A38AAA9B2DBC5ED0005F6EBC /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AAA9A2DBC5ECA005F6EBC /* ExtensionUIView.swift */; };
+		E1276A2D273E31C1002A6C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A2C273E31C1002A6C82 /* AppDelegate.swift */; };
+		E1276A36273E31C4002A6C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1276A35273E31C4002A6C82 /* Assets.xcassets */; };
+		E1276A39273E31C4002A6C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1276A37273E31C4002A6C82 /* LaunchScreen.storyboard */; };
+		E1276A46273E3352002A6C82 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A41273E3352002A6C82 /* HomeInterfaces.swift */; };
+		E1276A47273E3352002A6C82 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A42273E3352002A6C82 /* HomePresenter.swift */; };
+		E1276A48273E3352002A6C82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A43273E3352002A6C82 /* HomeViewController.swift */; };
+		E1276A49273E3352002A6C82 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A44273E3352002A6C82 /* HomeInteractor.swift */; };
+		E1276A4A273E3352002A6C82 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A45273E3352002A6C82 /* HomeWireframe.swift */; };
+		E1276A52273E33C4002A6C82 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A51273E33C4002A6C82 /* Item.swift */; };
+		E1276A54273E33E1002A6C82 /* HomeCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A53273E33E1002A6C82 /* HomeCustomTableViewCell.swift */; };
+		E1276A57273E363C002A6C82 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E1276A56273E363C002A6C82 /* Kingfisher */; };
+		E1276A5B273E3ABE002A6C82 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A5A273E3ABE002A6C82 /* ExtensionUIColor.swift */; };
+		E1276A5E273E3B81002A6C82 /* ColorsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A5D273E3B81002A6C82 /* ColorsHelper.swift */; };
+		E1276A60273F04C4002A6C82 /* HelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1276A5F273F04C4002A6C82 /* HelperManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A38AAA982DBC59C2005F6EBC /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		A38AAA9A2DBC5ECA005F6EBC /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		E1276A29273E31C1002A6C82 /* KonfioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonfioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1276A2C273E31C1002A6C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1276A35273E31C4002A6C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1276A38273E31C4002A6C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1276A3A273E31C4002A6C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1276A41273E3352002A6C82 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
+		E1276A42273E3352002A6C82 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E1276A43273E3352002A6C82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E1276A44273E3352002A6C82 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		E1276A45273E3352002A6C82 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		E1276A51273E33C4002A6C82 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E1276A53273E33E1002A6C82 /* HomeCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomTableViewCell.swift; sourceTree = "<group>"; };
+		E1276A5A273E3ABE002A6C82 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		E1276A5D273E3B81002A6C82 /* ColorsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsHelper.swift; sourceTree = "<group>"; };
+		E1276A5F273F04C4002A6C82 /* HelperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1276A26273E31C1002A6C82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1276A57273E363C002A6C82 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1276A20273E31C1002A6C82 = {
+			isa = PBXGroup;
+			children = (
+				E1276A2B273E31C1002A6C82 /* KonfioTest */,
+				E1276A2A273E31C1002A6C82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1276A2A273E31C1002A6C82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1276A29273E31C1002A6C82 /* KonfioTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1276A2B273E31C1002A6C82 /* KonfioTest */ = {
+			isa = PBXGroup;
+			children = (
+				E1276A40273E31FF002A6C82 /* Home */,
+				E1276A5C273E3AED002A6C82 /* Helpers */,
+				E1276A2C273E31C1002A6C82 /* AppDelegate.swift */,
+				E1276A35273E31C4002A6C82 /* Assets.xcassets */,
+				E1276A37273E31C4002A6C82 /* LaunchScreen.storyboard */,
+				E1276A3A273E31C4002A6C82 /* Info.plist */,
+			);
+			path = KonfioTest;
+			sourceTree = "<group>";
+		};
+		E1276A40273E31FF002A6C82 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E1276A4B273E337C002A6C82 /* View */,
+				E1276A4F273E339B002A6C82 /* Interactor */,
+				E1276A4E273E3393002A6C82 /* Presenter */,
+				E1276A4D273E338A002A6C82 /* Entity */,
+				E1276A4C273E3381002A6C82 /* Router */,
+				E1276A41273E3352002A6C82 /* HomeInterfaces.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E1276A4B273E337C002A6C82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1276A43273E3352002A6C82 /* HomeViewController.swift */,
+				E1276A53273E33E1002A6C82 /* HomeCustomTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1276A4C273E3381002A6C82 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E1276A45273E3352002A6C82 /* HomeWireframe.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E1276A4D273E338A002A6C82 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A38AAA982DBC59C2005F6EBC /* Rating.swift */,
+				E1276A51273E33C4002A6C82 /* Item.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E1276A4E273E3393002A6C82 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E1276A42273E3352002A6C82 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1276A4F273E339B002A6C82 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E1276A44273E3352002A6C82 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E1276A5C273E3AED002A6C82 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A38AAA9A2DBC5ECA005F6EBC /* ExtensionUIView.swift */,
+				E1276A5A273E3ABE002A6C82 /* ExtensionUIColor.swift */,
+				E1276A5D273E3B81002A6C82 /* ColorsHelper.swift */,
+				E1276A5F273F04C4002A6C82 /* HelperManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1276A28273E31C1002A6C82 /* KonfioTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1276A3D273E31C4002A6C82 /* Build configuration list for PBXNativeTarget "KonfioTest" */;
+			buildPhases = (
+				E1276A25273E31C1002A6C82 /* Sources */,
+				E1276A26273E31C1002A6C82 /* Frameworks */,
+				E1276A27273E31C1002A6C82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KonfioTest;
+			packageProductDependencies = (
+				E1276A56273E363C002A6C82 /* Kingfisher */,
+			);
+			productName = KonfioTest;
+			productReference = E1276A29273E31C1002A6C82 /* KonfioTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1276A21273E31C1002A6C82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E1276A28273E31C1002A6C82 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = E1276A24273E31C1002A6C82 /* Build configuration list for PBXProject "KonfioTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1276A20273E31C1002A6C82;
+			packageReferences = (
+				E1276A55273E363C002A6C82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = E1276A2A273E31C1002A6C82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1276A28273E31C1002A6C82 /* KonfioTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1276A27273E31C1002A6C82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1276A39273E31C4002A6C82 /* LaunchScreen.storyboard in Resources */,
+				E1276A36273E31C4002A6C82 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1276A25273E31C1002A6C82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A38AAA992DBC59CF005F6EBC /* Rating.swift in Sources */,
+				A38AAA9B2DBC5ED0005F6EBC /* ExtensionUIView.swift in Sources */,
+				E1276A47273E3352002A6C82 /* HomePresenter.swift in Sources */,
+				E1276A52273E33C4002A6C82 /* Item.swift in Sources */,
+				E1276A5E273E3B81002A6C82 /* ColorsHelper.swift in Sources */,
+				E1276A46273E3352002A6C82 /* HomeInterfaces.swift in Sources */,
+				E1276A5B273E3ABE002A6C82 /* ExtensionUIColor.swift in Sources */,
+				E1276A60273F04C4002A6C82 /* HelperManager.swift in Sources */,
+				E1276A2D273E31C1002A6C82 /* AppDelegate.swift in Sources */,
+				E1276A49273E3352002A6C82 /* HomeInteractor.swift in Sources */,
+				E1276A48273E3352002A6C82 /* HomeViewController.swift in Sources */,
+				E1276A4A273E3352002A6C82 /* HomeWireframe.swift in Sources */,
+				E1276A54273E33E1002A6C82 /* HomeCustomTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E1276A37273E31C4002A6C82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1276A38273E31C4002A6C82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1276A3B273E31C4002A6C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E1276A3C273E31C4002A6C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1276A3E273E31C4002A6C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28GWAF24BT;
+				INFOPLIST_FILE = KonfioTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = miclaro.app.KonfioTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1276A3F273E31C4002A6C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28GWAF24BT;
+				INFOPLIST_FILE = KonfioTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = miclaro.app.KonfioTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1276A24273E31C1002A6C82 /* Build configuration list for PBXProject "KonfioTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1276A3B273E31C4002A6C82 /* Debug */,
+				E1276A3C273E31C4002A6C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1276A3D273E31C4002A6C82 /* Build configuration list for PBXNativeTarget "KonfioTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1276A3E273E31C4002A6C82 /* Debug */,
+				E1276A3F273E31C4002A6C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1276A55273E363C002A6C82 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1276A56273E363C002A6C82 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1276A55273E363C002A6C82 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E1276A21273E31C1002A6C82 /* Project object */;
+}
