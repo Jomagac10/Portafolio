@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SuperHeroSearcher: View {
     @State var name: String = ""
-    @State var resultSearch: [Result] = []
+    @State var resultSearch: [HeroItem] = []
     var body: some View {
         VStack{
             
@@ -33,17 +33,21 @@ struct SuperHeroSearcher: View {
                         }
                     }
                 }
-            List {
-                ForEach(resultSearch, id: \.name) { result in
-                    Text(result.name ?? "")
-                }
-            }.listStyle(.automatic)
+            List(resultSearch) { result in
+                SuperHeroItem(superHero: result)
+//                ForEach(resultSearch, id: \.name) { result in
+//                    Text(result.name ?? "")
+//                }
+            }.listStyle(.plain)
             Spacer()
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.backgroundIMC)
     }
 }
 
+
 #Preview {
     SuperHeroSearcher()
 }
+
+

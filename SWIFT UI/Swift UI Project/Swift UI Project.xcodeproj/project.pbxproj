@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A37F178030665B3E005E0315 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A37F177F30665B3E005E0315 /* Kingfisher */; };
+		A37F178330665BD5005E0315 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A37F178230665BD5005E0315 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A3BB67C230664AE20016FFBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +34,22 @@
 		A3BB67CB30664AE20016FFBF /* Swift UI ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift UI ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A37F17853066601C005E0315 /* Exceptions for "Swift UI Project" folder in "Swift UI Project" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Swift-UI-Project-Info.plist",
+			);
+			target = A3BB67B330664ADD0016FFBF /* Swift UI Project */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A3BB67B630664ADD0016FFBF /* Swift UI Project */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A37F17853066601C005E0315 /* Exceptions for "Swift UI Project" folder in "Swift UI Project" target */,
+			);
 			path = "Swift UI Project";
 			sourceTree = "<group>";
 		};
@@ -52,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37F178330665BD5005E0315 /* SDWebImageSwiftUI in Frameworks */,
+				A37F178030665B3E005E0315 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +132,8 @@
 			);
 			name = "Swift UI Project";
 			packageProductDependencies = (
+				A37F177F30665B3E005E0315 /* Kingfisher */,
+				A37F178230665BD5005E0315 /* SDWebImageSwiftUI */,
 			);
 			productName = "Swift UI Project";
 			productReference = A3BB67B430664ADD0016FFBF /* Swift UI Project.app */;
@@ -195,6 +217,10 @@
 			);
 			mainGroup = A3BB67AB30664ADD0016FFBF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A37F177E30665B3E005E0315 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A37F178130665BD5005E0315 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A3BB67B530664ADD0016FFBF /* Products */;
 			projectDirPath = "";
@@ -400,6 +426,7 @@
 				DEVELOPMENT_TEAM = 28GWAF24BT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Swift-UI-Project-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +459,7 @@
 				DEVELOPMENT_TEAM = 28GWAF24BT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Swift-UI-Project-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,6 +606,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A37F177E30665B3E005E0315 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.13.0;
+			};
+		};
+		A37F178130665BD5005E0315 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A37F177F30665B3E005E0315 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A37F177E30665B3E005E0315 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		A37F178230665BD5005E0315 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A37F178130665BD5005E0315 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A3BB67AC30664ADD0016FFBF /* Project object */;
 }
