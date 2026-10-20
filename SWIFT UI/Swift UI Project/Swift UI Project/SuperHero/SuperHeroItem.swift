@@ -11,61 +11,94 @@ struct SuperHeroItem: View {
     let superHero: HeroItem
 
     private var imageURL: URL? {
-        guard var raw = superHero.image?.url, !raw.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return nil }
-        // Trim whitespace/newlines
-        raw = raw.trimmingCharacters(in: .whitespacesAndNewlines)
-        // Force https
-        if raw.hasPrefix("http://") {
-            raw = "https://" + raw.dropFirst("http://".count)
+        guard let raw = superHero.image?.url?
+            .trimmingCharacters(in: .whitespacesAndNewlines),
+              !raw.isEmpty else {
+            return nil
         }
-        return URL(string: raw)
+
+        let httpsURL = raw.hasPrefix("http://")
+            ? "https://" + raw.dropFirst("http://".count)
+            : raw
+
+        return URL(string: String(httpsURL))
     }
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            // Background image
+
+            // Imagen de fondo
             AsyncImage(url: imageURL) { phase in
                 switch phase {
                 case .empty:
-                    ZStack {
-                        Color.gray.opacity(0.2)
-                        ProgressView()
-                    }
+                    placeholder
+
                 case .success(let image):
                     image
                         .resizable()
-                        .scaledToFit()
-                        .transition(.opacity.animation(.easeInOut(duration: 0.2)))
-                case .failure( _):
-                    ZStack {
-                        Color.gray.opacity(0.2)
-                        Image(systemName: "photo")
-                            .font(.largeTitle)
-                            .foregroundStyle(.secondary)
-                    }
+                        .scaledToFill()
+
+                case .failure:
+                    placeholder
+                        .overlay {
+                            Image(systemName: "photo")
+                                .font(.largeTitle)
+                                .foregroundStyle(.secondary)
+                        }
+
                 @unknown default:
-                    Color.gray.opacity(0.2)
+                    placeholder
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: .infinity)
+            .frame(height: 200)
             .clipped()
-            
 
-            // Title overlay
+            // Degradado
+//            LinearGradient(
+//                colors: [
+//                    .black.opacity(0.7),
+//                    .clear
+//                ],
+//                startPoint: .bottom,
+//                endPoint: .top
+//            )
+//            .allowsHitTesting(false)
+
+            // Título siempre encima de la imagen
             Text(superHero.name ?? "")
-                .font(.title3)
-                .bold()
+                .font(.title3.bold())
                 .foregroundStyle(.white)
                 .lineLimit(1)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
-                .background(.black.opacity(0.45))
+                .background(.black.opacity(0.6))
+                .shadow(
+                    color: .black.opacity(0.8),
+                    radius: 4,
+                    x: 0,
+                    y: 2
+                )
         }
         .frame(height: 200)
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-        .listRowBackground(Color.backgroundIMC)
+        .clipShape(
+            RoundedRectangle(
+                cornerRadius: 16,
+                style: .continuous
+            )
+        )
+    }
+
+    private var placeholder: some View {
+        ZStack {
+            Color.gray.opacity(0.2)
+            ProgressView()
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 200)
     }
 }
+
 
 #Preview {
     SuperHeroItem(

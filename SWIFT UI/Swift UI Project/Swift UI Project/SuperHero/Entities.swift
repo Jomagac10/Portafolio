@@ -95,3 +95,100 @@ struct Powerstat: Codable{
     var speed : String?
     var strength : String?
 }
+
+
+
+
+
+
+//////////////////////////////////////////////////////
+//MARK: - Second consumption
+struct HeroDetail: Codable, Identifiable{
+    var response: String?
+    var id: String?
+    var name: String?
+    var powerstats: PowerStats?
+    var biography: BiographyDetail?
+    var appearance: AppearanceDetail?
+    var work: WorkDetail?
+    var connections: Connections?
+    var image: HeroImage?
+    
+    private enum CodingKeys: String, CodingKey {
+        case response
+        case id
+        case name
+        case powerstats
+        case biography
+        case appearance
+        case work
+        case connections
+        case image
+    }
+}
+
+struct PowerStats: Codable {
+    var intelligence: String
+    var strength: String
+    var speed: String
+    var durability: String
+    var power: String
+    var combat: String
+}
+
+struct BiographyDetail: Codable {
+    var fullName: String
+    var alterEgos: String
+    var aliases: [String]
+    var placeOfBirth: String
+    var firstAppearance: String
+    var publisher: String
+    var alignment: String
+
+    enum CodingKeys: String, CodingKey {
+        case fullName = "full-name"
+        case alterEgos = "alter-egos"
+        case aliases
+        case placeOfBirth = "place-of-birth"
+        case firstAppearance = "first-appearance"
+        case publisher
+        case alignment
+    }
+}
+
+struct AppearanceDetail: Codable {
+    var gender: String
+    var race: String
+    var height: [String]
+    var weight: [String]
+    var eyeColor: String
+    var hairColor: String
+
+    enum CodingKeys: String, CodingKey {
+        case gender
+        case race
+        case height
+        case weight
+        case eyeColor = "eye-color"
+        case hairColor = "hair-color"
+    }
+}
+
+struct WorkDetail: Codable {
+    var occupation: String
+    var base: String
+}
+
+struct Connections: Codable {
+    var groupAffiliation: String
+    var relatives: String
+
+    enum CodingKeys: String, CodingKey {
+        case groupAffiliation = "group-affiliation"
+        case relatives
+    }
+}
+
+struct HeroImage: Codable {
+    var url: String
+}

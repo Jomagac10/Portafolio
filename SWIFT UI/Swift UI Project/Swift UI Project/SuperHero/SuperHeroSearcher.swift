@@ -10,6 +10,7 @@ import SwiftUI
 struct SuperHeroSearcher: View {
     @State var name: String = ""
     @State var resultSearch: [HeroItem] = []
+    @State var loading: Bool = false
     var body: some View {
         VStack{
             
@@ -22,6 +23,7 @@ struct SuperHeroSearcher: View {
                 .padding(8)
                 .autocorrectionDisabled()
                 .onSubmit {
+                    loading = true
                     Task{
                         do{
                             let response = try await APINetwork().getHeroesByQuery(query: name)
@@ -31,14 +33,29 @@ struct SuperHeroSearcher: View {
                         } catch {
                             print("An error occurred: \(error)")
                         }
+                        loading = false
                     }
+                    
                 }
-            List(resultSearch) { result in
-                SuperHeroItem(superHero: result)
-//                ForEach(resultSearch, id: \.name) { result in
-//                    Text(result.name ?? "")
-//                }
-            }.listStyle(.plain)
+            if loading{
+                ProgressView().tint(.white)
+            }
+            NavigationStack{
+                List(resultSearch) { result in
+                    ZStack{
+                        SuperHeroItem(superHero: result)
+                        NavigationLink(destination: SuperHeroDetail(id: result.id ?? "")){
+                            EmptyView().opacity(0)
+                        }
+                    }.listRowBackground(Color.backgroundIMC)
+                    
+    //                ForEach(resultSearch, id: \.name) { result in
+    //                    Text(result.name ?? "")
+    //                }
+                }.listStyle(.plain)
+                
+            }
+            
             Spacer()
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.backgroundIMC)
