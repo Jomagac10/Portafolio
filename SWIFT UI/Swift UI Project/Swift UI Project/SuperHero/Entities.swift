@@ -128,12 +128,28 @@ struct HeroDetail: Codable, Identifiable{
 }
 
 struct PowerStats: Codable {
-    var intelligence: String
-    var strength: String
-    var speed: String
-    var durability: String
-    var power: String
-    var combat: String
+    var intelligence: String?
+    var strength: String?
+    var speed: String?
+    var durability: String?
+    var power: String?
+    var combat: String?
+    
+    
+    var asArray: [(label: String, value: String)] {
+        [
+            ("Intelligence", intelligence),
+            ("Strength", strength),
+            ("Speed", speed),
+            ("Durability", durability),
+            ("Power", power),
+            ("Combat", combat)
+        ]
+        .compactMap { label, value in
+            guard let value else { return nil }
+            return (label, value)
+        }
+    }
 }
 
 struct BiographyDetail: Codable {
