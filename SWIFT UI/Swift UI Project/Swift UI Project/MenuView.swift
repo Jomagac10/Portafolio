@@ -17,16 +17,6 @@ struct MenuView: View {
     )
     var body: some View {
         NavigationStack{
-//            VStack{
-//                NavigationLink( destination: IMCView()){
-//                    Text("Title App")
-//                }
-//                Text("Title 1")
-//                Text("Title 2")
-//                Text("Title 3")
-//                Text("Title 4")
-//                Text("Title 5")
-//            }
             List{
                 NavigationLink( destination: IMCView()){
                     Text("Title App")
@@ -38,9 +28,13 @@ struct MenuView: View {
                     Text("Maps")
                 }
                 
-                Text("Title 2")
+                NavigationLink(destination: FavoritePlaces()) {
+                    Text("Favorite places").background(.backgroundIMC.opacity(0.5))
+                }
 
-                Text("Title 3")
+                NavigationLink(destination: CombineCleanArchitecture()) {
+                    Text("Ejemplo combine")
+                }
             }
         }
     }
